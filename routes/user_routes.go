@@ -12,9 +12,8 @@ func SetupUserRoutes(r *gin.Engine) {
 		userRoute.POST("/register", func(ctx *gin.Context) {
 			controllers.UserRegister(ctx)
 		})
-		// TODO: Uncomment the following code
-		// userRoute.POST("/login", func(ctx *gin.Context) {
-		// 	controllers.UserLogin(ctx, db)
-		// })
+		userRoute.POST("/login", func(ctx *gin.Context) {
+			controllers.UserLogin(ctx)
+		})
 	}
 }
